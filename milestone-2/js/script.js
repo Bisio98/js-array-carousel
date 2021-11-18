@@ -24,7 +24,7 @@ const text = [
 
 
 const imgContainer = document.querySelector('.big_image');
-const descriptionContainer = document.querySelector('.description')
+const descriptionContainerH = document.querySelector('.description')
 const imgList = document.querySelector('.list_image')
 
 for( let i = 0; i < imgArray.length; i++ ) {
@@ -33,9 +33,8 @@ for( let i = 0; i < imgArray.length; i++ ) {
 
     imgContainer.innerHTML += newImg;
 
-    const newDescrition = `<div class="hide"><img src="${thisPath}" alt="Img ${i}"></div>`;
-
-    imgContainer.innerHTML += newImg;
+    document.getElementById("where_des").innerHTML= title[i];
+    document.getElementById("what_des").innerHTML = text[i]; 
 
     const newLittleImg = `<li><img class="element" src="${thisPath}" alt="Img ${i}"></li>`; 
 
@@ -47,3 +46,5 @@ const bigPhoto = document.getElementsByClassName('hide');
 const smallPhoto = document.getElementsByClassName('element');
 bigPhoto[onImage].classList.add('show');
 smallPhoto[onImage].classList.add('active');
+document.getElementById("where_des").innerHTML = title[onImage];
+document.getElementById("what_des").innerHTML = text[onImage]; 

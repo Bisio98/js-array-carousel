@@ -44,8 +44,10 @@
 
 .container .description{
     position: absolute;
-    bottom: 20%;
-    right: 20%;
+    text-align: right;
+    width: 50%;
+    bottom: 10%;
+    right: 10%;
     color: white;
 }
 

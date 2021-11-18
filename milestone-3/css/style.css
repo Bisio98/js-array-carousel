@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.centered{
+    margin: auto;
+    display: flex;
+    width: 60%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+}
+
+.container .big_image{
+    position: relative;
+    float: left;
+    width: 80%;
+    height: 100%;
+}
+
+.big_image .hide,.big_image .show{
+    height: 50vh;
+}
+
+.big_image .hide{
+    display: none;
+}
+
+.big_image .show{
+    display: block;
+}
+
+.container .big_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container .description{
+    position: absolute;
+    text-align: right;
+    width: 50%;
+    bottom: 10%;
+    right: 10%;
+    color: white;
+}
+
+.list_container{
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 50vh;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.list_container .arrow{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 40px;
+    background-color: rgba(250, 250, 250, 0.4);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    right: 50%;
+    transform: translate(50%,0);
+    cursor: pointer;
+}
+
+.arrow.up{
+    top: 25px;
+}
+
+.arrow.down{
+    bottom: 25px;
+}
+
+.container li{
+    display: flex;
+    width: 100%;
+    height: calc(50vh / 5);
+}
+
+.container ul li .active{
+    border: 4px solid lightgray;
+    opacity: 1 !important;
+}
+
+.container .list_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
